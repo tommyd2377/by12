@@ -17,7 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation-name: example;
+    animation-name: colorChange;
     animation-duration: 24s;
     animation-iteration-count: infinite;
 }
@@ -32,7 +32,7 @@ body {
     height: 120px;
 }
 
-@keyframes example {
+@keyframes colorChange {
     0%   {background-color: white;}
     50%   {background-color: white;}
     51%   {background-color: #f1f1f1;}
