@@ -1,0 +1,40 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.img-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: example;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+}
+
+.itunes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.by12 {
+    height: 120px;
+}
+
+@keyframes example {
+    0%   {background-color: white;}
+    50%   {background-color: white;}
+    51%   {background-color: #f1f1f1;}
+    100%   {background-color: #f1f1f1;}
+  }
