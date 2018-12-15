@@ -4,6 +4,10 @@ html, body {
 
 body {
     margin: 0;
+    animation-name: colorChange;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .img-container {
@@ -17,9 +21,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation-name: colorChange;
-    animation-duration: 24s;
-    animation-iteration-count: infinite;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    color: blue;
+}
+
+.menu-img {
+    height: 36px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 12px;
 }
 
 .itunes {
@@ -34,7 +46,6 @@ body {
 
 @keyframes colorChange {
     0%   {background-color: white;}
-    50%   {background-color: white;}
-    51%   {background-color: #f1f1f1;}
-    100%   {background-color: #f1f1f1;}
+    48%   {background-color: #f8f8fa;}
+    100%   {background-color: white;}
   }
