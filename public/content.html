@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>by12</title>
+<meta name="description" content="quality design">
+<meta name="keywords" content="Apple, Apple Music, design, create, music, art, graphics, new york city,">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+<link rel="icon" href="favicon2.png" />
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+        // Initialize Firebase
+        var config = {
+                apiKey: "AIzaSyCcE6o-_Z3mEemFrXeU29JFGapLkapttBQ",
+                authDomain: "by12-io.firebaseapp.com",
+                databaseURL: "https://by12-io.firebaseio.com",
+                projectId: "by12-io",
+                storageBucket: "by12-io.appspot.com",
+                messagingSenderId: "479228182509"
+        };
+        firebase.initializeApp(config);
+</script>
+<script src="app.js"></script>
+</head>
+        <header>
+                <nav>
+                        <div class="topnav">
+                                <a id="logo" class="active">Logo</a>
+                                <a href="javascript:void(0);" class="icon" onclick="menuToggle(this)">
+                                        <div class="contain">
+                                                <div class="bar1"></div>
+                                                <div class="bar2"></div>
+                                                <div class="bar3"></div>
+                                        </div>
+                                </a>
+                        <div id="myLinks">
+                                <a href="subscribe.html">subscribe</a>
+                        </div>
+                
+                        </div>
+                </nav>
+        </header>
+<body> 
+
+<div class="itunes" id="mainFrameOne">
+        <iframe allow="autoplay *; encrypted-media *;" 
+                frameborder="0" height="1000" style="padding: 0; width: 375px; height: 1000px; 
+                max-width: 100%; border: none; overflow: hidden; background: transparent;"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts
+                allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/playlist/001by12-selects/pl.u-DdANrYNC03jlJZ">
+        </iframe>
+</div>
+        <div class="itunes" id="mainFrameTwo" style="display:none;">
+</div>
+
+<script>
+        function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                x.style.display = "none";
+                } else {
+                x.style.display = "block";
+                }
+        }
+</script>
+</body>
+</html>

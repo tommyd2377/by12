@@ -3,11 +3,264 @@ html, body {
 }
 
 body {
-    margin: 0;
+    margin: -25px;
+    padding: 0;
     animation-name: colorChange;
     animation-duration: 24s;
     animation-iteration-count: infinite;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.latin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.para-container {
+    padding: 30px;
+    margin: 30px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input,
+span,
+label,
+textarea {
+  font-family: 'Ubuntu', sans-serif;
+  display: block;
+  border: none;
+  font-size: 22px;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+/* Question */
+
+input.question,
+textarea.question {
+  font-size: 20px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+/* Underline and Placeholder */
+
+input.question + label,
+textarea.question + label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-top: 1px solid black;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.question:focus + label,
+textarea.question:focus + label {
+  width: 100%;
+}
+
+input.question:focus,
+input.question:valid {
+  padding-top: 35px;
+}
+
+textarea.question:valid,
+textarea.question:focus {
+  margin-top: 35px;
+}
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #333;
+}
+
+textarea.question:focus + label > span,
+textarea.question:valid + label > span {
+  top: -150px;
+  font-size: 22px;
+  color: #333;
+}
+
+input.question:valid + label,
+textarea.question:valid + label {
+  border-color: black;
+}
+
+input.question:invalid,
+textarea.question:invalid {
+  box-shadow: none;
+}
+
+input.question + label > span,
+textarea.question + label > span {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #8F8F8F;
+  font-size: 20px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  display: block;
+  opacity: 0;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #EEE;
+}
+
+input[type="submit"]:active {
+  background: #999;
+}
+
+input.question:valid ~ input[type="submit"], textarea.question:valid ~ input[type="submit"] {
+  -webkit-animation: appear 1s forwards;
+  animation: appear 1s forwards;
+}
+
+input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input[type="submit"] {
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    width: 100%
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-7px, -10px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.subscribe-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo {
+    opacity: 0;
+}
+
+/* Style the navigation menu */
+.topnav {
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+}
+  
+/* Style navigation menu links */
+.topnav a {
+    margin: 5px;
+    border-color: black;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+    padding: 12px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+    color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+    color: white;
 }
 
 .img-container {
@@ -23,8 +276,15 @@ body {
     justify-content: center;
 }
 
-.navbar-inverse .navbar-toggle .icon-bar {
-    color: blue;
+.button {
+    position: fixed;
+    top: 60%;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center
 }
 
 .menu-img {
@@ -35,17 +295,30 @@ body {
 }
 
 .itunes {
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.by12 {
+#para {
+    position: absolute;
+    padding: 240px;
+    z-index:-1;
+    display: none
+}
+
+#para:hover {
+    display: block;
+}
+
+#by12 {
     height: 120px;
+
 }
 
 @keyframes colorChange {
     0%   {background-color: white;}
     48%   {background-color: #f8f8fa;}
     100%   {background-color: white;}
-  }
+}

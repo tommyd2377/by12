@@ -14,6 +14,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 <link rel="icon" href="favicon2.png" />
 <script src="app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -28,34 +30,43 @@
   firebase.initializeApp(config);
 </script>
 </head>
-    <header>
-            <nav>
-                <div class="topnav">
-                        <a id="logo" href="#home" class="active">Logo</a>
-                        <a href="javascript:void(0);" class="icon" onclick="menuToggle(this)">
-                                <div class="contain">
-                                        <div class="bar1"></div>
-                                        <div class="bar2"></div>
-                                        <div class="bar3"></div>
-                                      </div>
-                        </a>
-                <div id="myLinks">
-                        <a href="content.html">content</a>
-                        <a href="subscribe.html">subscribe</a>
-                </div>
-        
-                </div>
-            </nav>
-    </header>
-  
-    <body>
-        <div class="img-container">
-    
-    <a href="content.html">
-        <img id="by12" src="by12.png" alt="by12">
-    </a>
-    
+<header>
+    <nav>
+        <div class="topnav">
+                <a id="logo" href="#home" class="active">Logo</a>
+                <a href="javascript:void(0);" class="icon" onclick="menuToggle(this)">
+                        <div class="contain">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                              </div>
+                </a>
+            <div style="height: 50px" id="myLinks">
+                <a href="content.html">content</a>
+            </div>
 
+        </div>
+    </nav>
+</header>
+<body> 
+
+    <div class="subscribe-container">
+        <div class="input">
+            <form>
+                    <input placeholder="email" type="text" name="name" class="question" id="nme" required autocomplete="off" />
+                    <label for="nme"></label>
+                
+              
+                </form> 
+                <br>
+                <button onclick="collectEmail()">submit</button>
+        </div>
+      
+               
+            
+         
     </div>
+    
 </body>
+
 </html>
